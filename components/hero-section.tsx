@@ -24,6 +24,7 @@ export function HeroSection() {
 
   return (
     <section
+      id="home"
       ref={heroRef}
       className="relative h-screen flex items-center justify-center w-full"
       style={

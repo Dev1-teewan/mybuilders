@@ -1,57 +1,62 @@
-"use client"
+"use client";
 
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react";
 
 export function VideoSection() {
-  const sectionRef = useRef<HTMLDivElement>(null)
-  const videoContainerRef = useRef<HTMLDivElement>(null)
-  const [scale, setScale] = useState(0.65)
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const videoContainerRef = useRef<HTMLDivElement>(null);
+  const [scale, setScale] = useState(0.65);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (!videoContainerRef.current) return
+      if (!videoContainerRef.current) return;
 
-      const videoRect = videoContainerRef.current.getBoundingClientRect()
-      const viewportHeight = window.innerHeight
-      const viewportCenter = viewportHeight / 2
-      
+      const videoRect = videoContainerRef.current.getBoundingClientRect();
+      const viewportHeight = window.innerHeight;
+      const viewportCenter = viewportHeight / 2;
+
       // Calculate video container's center position
-      const videoCenter = videoRect.top + videoRect.height / 2
-      
+      const videoCenter = videoRect.top + videoRect.height / 2;
+
       // Calculate distance from video center to viewport center
-      const distanceFromCenter = videoCenter - viewportCenter
-      
+      const distanceFromCenter = videoCenter - viewportCenter;
+
       // Define the range where scaling happens
       // Start scaling when video center is below viewport center
-      const scaleStartDistance = viewportHeight * 0.4 // Start scaling earlier
-      const scaleEndDistance = 0 // Complete at center
-      
+      const scaleStartDistance = viewportHeight * 0.4; // Start scaling earlier
+      const scaleEndDistance = 0; // Complete at center
+
       if (distanceFromCenter > scaleStartDistance) {
         // Video is below viewport - start scale
-        setScale(0.65)
+        setScale(0.65);
       } else if (distanceFromCenter <= scaleEndDistance) {
         // Video center is at or above viewport center - full scale
-        setScale(1)
+        setScale(1);
       } else {
         // Video is approaching center - interpolate scale
-        const scrollProgress = 1 - (distanceFromCenter / scaleStartDistance)
-        
-        // Ease out cubic for smoother animation
-        const easedProgress = 1 - Math.pow(1 - scrollProgress, 3)
-        
-        // Scale from 0.65 to 1
-        const newScale = 0.65 + easedProgress * 0.35
-        setScale(newScale)
-      }
-    }
+        const scrollProgress = 1 - distanceFromCenter / scaleStartDistance;
 
-    window.addEventListener("scroll", handleScroll, { passive: true })
-    handleScroll() // Initial check
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+        // Ease out cubic for smoother animation
+        const easedProgress = 1 - Math.pow(1 - scrollProgress, 3);
+
+        // Scale from 0.65 to 1
+        const newScale = 0.65 + easedProgress * 0.35;
+        setScale(newScale);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll(); // Initial check
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <section ref={sectionRef} className="relative py-32 md:py-48 min-h-screen flex items-center" style={{ maxWidth: "100vw", overflowX: "hidden" }}>
+    <section
+      id="events"
+      ref={sectionRef}
+      className="relative py-32 md:py-48 min-h-screen flex items-center"
+      style={{ maxWidth: "100vw", overflowX: "hidden" }}
+    >
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary/5 to-background pointer-events-none" />
 
@@ -62,7 +67,8 @@ export function VideoSection() {
             Past Events
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-balance">
-            Experience the highlights from our Startup Village event, where Malaysia's Web3 community came together to connect, collaborate, and build the future of decentralized technology.
+            Watch highlights from our Startup Village event where Malaysia's
+            Web3 builders came together.
           </p>
         </div>
 
@@ -91,5 +97,5 @@ export function VideoSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

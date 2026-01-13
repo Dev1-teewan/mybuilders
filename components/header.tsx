@@ -9,6 +9,17 @@ import { Button } from "@/components/ui/button"
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId)
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      })
+    }
+    setIsMenuOpen(false)
+  }
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-xl border-b border-border/50 shadow-lg" style={{ maxWidth: "100vw" }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -32,36 +43,30 @@ export function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-10">
-            <Link
-              href="#about"
-              className="text-muted-foreground hover:text-foreground transition-colors text-sm font-normal uppercase tracking-wide"
+            <button
+              onClick={() => scrollToSection("home")}
+              className="text-muted-foreground hover:text-foreground transition-colors text-sm font-normal uppercase tracking-wide cursor-pointer bg-transparent border-none"
             >
-              About
-            </Link>
-            <Link
-              href="#what-we-do"
-              className="text-muted-foreground hover:text-foreground transition-colors text-sm font-normal uppercase tracking-wide"
+              Home
+            </button>
+            <button
+              onClick={() => scrollToSection("what-we-do")}
+              className="text-muted-foreground hover:text-foreground transition-colors text-sm font-normal uppercase tracking-wide cursor-pointer bg-transparent border-none"
             >
-              Partners
-            </Link>
-            <Link
-              href="#ecosystem"
-              className="text-muted-foreground hover:text-foreground transition-colors text-sm font-normal uppercase tracking-wide"
+              Services
+            </button>
+            <button
+              onClick={() => scrollToSection("events")}
+              className="text-muted-foreground hover:text-foreground transition-colors text-sm font-normal uppercase tracking-wide cursor-pointer bg-transparent border-none"
             >
               Events
-            </Link>
-            <Link
-              href="#team"
-              className="text-muted-foreground hover:text-foreground transition-colors text-sm font-normal uppercase tracking-wide"
+            </button>
+            <button
+              onClick={() => scrollToSection("ecosystem")}
+              className="text-muted-foreground hover:text-foreground transition-colors text-sm font-normal uppercase tracking-wide cursor-pointer bg-transparent border-none"
             >
-              Team
-            </Link>
-            <Link
-              href="#faq"
-              className="text-muted-foreground hover:text-foreground transition-colors text-sm font-normal uppercase tracking-wide"
-            >
-              FAQ
-            </Link>
+              Partners
+            </button>
           </nav>
 
           {/* CTA Button */}
@@ -85,34 +90,30 @@ export function Header() {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-border/50">
             <nav className="flex flex-col gap-4">
-              <Link
-                href="#about"
-                className="text-muted-foreground hover:text-foreground transition-colors py-2"
-                onClick={() => setIsMenuOpen(false)}
+              <button
+                onClick={() => scrollToSection("home")}
+                className="text-muted-foreground hover:text-foreground transition-colors py-2 text-left bg-transparent border-none cursor-pointer"
               >
-                About
-              </Link>
-              <Link
-                href="#what-we-do"
-                className="text-muted-foreground hover:text-foreground transition-colors py-2"
-                onClick={() => setIsMenuOpen(false)}
+                Home
+              </button>
+              <button
+                onClick={() => scrollToSection("what-we-do")}
+                className="text-muted-foreground hover:text-foreground transition-colors py-2 text-left bg-transparent border-none cursor-pointer"
               >
-                What We Do
-              </Link>
-              <Link
-                href="#ecosystem"
-                className="text-muted-foreground hover:text-foreground transition-colors py-2"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Ecosystem
-              </Link>
-              <Link
-                href="#events"
-                className="text-muted-foreground hover:text-foreground transition-colors py-2"
-                onClick={() => setIsMenuOpen(false)}
+                Services
+              </button>
+              <button
+                onClick={() => scrollToSection("events")}
+                className="text-muted-foreground hover:text-foreground transition-colors py-2 text-left bg-transparent border-none cursor-pointer"
               >
                 Events
-              </Link>
+              </button>
+              <button
+                onClick={() => scrollToSection("ecosystem")}
+                className="text-muted-foreground hover:text-foreground transition-colors py-2 text-left bg-transparent border-none cursor-pointer"
+              >
+                Partners
+              </button>
               <Button className="bg-transparent border-2 border-border/60 text-foreground hover:bg-foreground hover:text-background hover:border-foreground transition-all duration-300 w-full mt-2 rounded-full">
                 Apply Today
               </Button>
