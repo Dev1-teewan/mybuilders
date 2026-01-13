@@ -1,0 +1,9 @@
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="128" height="128" rx="24" fill="#0F172A"/>
+  <!-- Left M block -->
+  <rect x="28" y="32" width="16" height="64" rx="4" fill="#34D399"/>
+  <rect x="44" y="48" width="16" height="48" rx="4" fill="#34D399"/>
+  <!-- Right Y block -->
+  <rect x="68" y="32" width="16" height="40" rx="4" fill="#FACC15"/>
+  <rect x="84" y="32" width="16" height="64" rx="4" fill="#FACC15"/>
+</svg>
