@@ -1,33 +1,26 @@
 "use client"
 
 import { useState } from "react"
+import Image from "next/image"
 
 const partners = [
-  // Placeholder Partners
-  { name: "Partner 1", logo: "P1", type: "global" },
-  { name: "Partner 2", logo: "P2", type: "global" },
-  { name: "Partner 3", logo: "P3", type: "global" },
-  { name: "Partner 4", logo: "P4", type: "global" },
-  { name: "Partner 5", logo: "P5", type: "global" },
-  { name: "Partner 6", logo: "P6", type: "global" },
-  { name: "Partner 7", logo: "P7", type: "global" },
-  { name: "Partner 8", logo: "P8", type: "global" },
-  { name: "Partner 9", logo: "P9", type: "global" },
-  { name: "Partner 10", logo: "P10", type: "global" },
-  { name: "Partner 11", logo: "P11", type: "global" },
-  { name: "Partner 12", logo: "P12", type: "global" },
-  { name: "Partner 13", logo: "P13", type: "global" },
-  { name: "Partner 14", logo: "P14", type: "global" },
-  { name: "Partner 15", logo: "P15", type: "global" },
-  { name: "Partner 16", logo: "P16", type: "global" },
-  { name: "Partner 17", logo: "P17", type: "global" },
-  { name: "Partner 18", logo: "P18", type: "global" },
-  { name: "Partner 19", logo: "P19", type: "global" },
-  { name: "Partner 20", logo: "P20", type: "global" },
-  { name: "Partner 21", logo: "P21", type: "global" },
-  { name: "Partner 22", logo: "P22", type: "global" },
-  { name: "Partner 23", logo: "P23", type: "global" },
-  { name: "Partner 24", logo: "P24", type: "global" },
+  { name: "Jupiter", logo: "/logo/jupiter.svg" },
+  { name: "Solscan", logo: "/logo/solscan-logo-light.svg" },
+  { name: "Coingecko", logo: "/logo/coingeckgo.svg" },
+  { name: "Solana Foundation", logo: "/logo/solanaLogoMark.svg" },
+  { name: "Orca", logo: "/logo/orca.svg" },
+  { name: "Circle", logo: "/logo/circle.svg" },
+  { name: "Backpack", logo: "/logo/backpack.png" },
+  { name: "Superteam", logo: "/logo/superteam.jpeg" },
+  { name: "Zeus Network", logo: "/logo/zeus-network.jpeg" },
+  { name: "Flash Trade", logo: "/logo/flash-trade.png" },
+  { name: "Solana FM", logo: "/logo/solanafm.png" },
+  { name: "Airfoil", logo: "/logo/airfoildesign_logo.jpeg" },
+  { name: "Sanctum", logo: "/logo/santrum.svg" },
+  { name: "Drift", logo: "/logo/drift.svg" },
+  { name: "Birdeye", logo: "/logo/Birdeye Logo_White logomark 600x600.png" },
+  { name: "Hawksight", logo: "/logo/hawkfi.png" },
+  { name: "Wormhole", logo: "/logo/wormhole.svg" },
 ]
 
 export function EcosystemSection() {
@@ -63,19 +56,18 @@ export function EcosystemSection() {
             >
               {/* Logo Container */}
               <div
-                className={`flex flex-col items-center justify-center gap-2 transition-all duration-300 px-2 ${
-                  hoveredIndex === index ? "opacity-100 scale-105" : "opacity-60 scale-100"
+                className={`flex flex-col items-center justify-center gap-3 transition-all duration-300 px-4 py-4 ${
+                  hoveredIndex === index ? "opacity-100 scale-105" : "opacity-70 scale-100"
                 }`}
               >
-                {/* Placeholder Logo */}
-                <div
-                  className={`w-10 h-10 rounded-lg flex items-center justify-center font-bold text-xs transition-all duration-300 ${
-                    hoveredIndex === index
-                      ? "bg-primary text-primary-foreground shadow-lg"
-                      : "bg-muted/50 text-muted-foreground"
-                  }`}
-                >
-                  {partner.logo.length <= 3 ? partner.logo : partner.logo.slice(0, 2)}
+                {/* Partner Logo */}
+                <div className="relative w-16 h-16 flex items-center justify-center">
+                  <Image
+                    src={partner.logo}
+                    alt={`${partner.name} logo`}
+                    fill
+                    className="object-contain"
+                  />
                 </div>
                 <span
                   className={`font-medium text-xs text-center transition-colors duration-300 ${

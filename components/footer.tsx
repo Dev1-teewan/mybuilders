@@ -17,22 +17,22 @@ export function Footer() {
             className="inline-flex items-center gap-3 group justify-center md:justify-start"
           >
             <div className="relative w-10 h-10 md:w-10 md:h-10 transition-transform duration-300 group-hover:scale-105">
-              <Image
-                src="/mybuilders-icon.svg"
-                alt="MyBuilders"
-                fill
-                className="object-contain"
-              />
-            </div>
-            <div className="flex items-baseline gap-0">
+                <Image
+                  src="/mybuilders-icon.svg"
+                  alt="MyBuilders"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              <div className="flex items-baseline gap-0">
               <span className="text-foreground font-semibold text-lg md:text-lg tracking-tight">
                 MY
               </span>
               <span className="text-foreground font-normal text-lg md:text-lg tracking-tight">
                 Builders
               </span>
-            </div>
-          </Link>
+              </div>
+            </Link>
 
           {/* Line 2 Mobile: Social Links Center | Desktop: Social Links Right */}
           <div className="flex items-center gap-3 justify-center md:justify-end">
@@ -48,10 +48,10 @@ export function Footer() {
             </div>
             <div className="w-10 h-10 rounded-xl bg-secondary/50 border border-border/40 flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-secondary hover:border-primary/50 transition-all duration-300 cursor-pointer">
               <Send className="w-4 h-4" />
-            </div>
+          </div>
             <div className="w-10 h-10 rounded-xl bg-secondary/50 border border-border/40 flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-secondary hover:border-primary/50 transition-all duration-300 cursor-pointer">
               <Linkedin className="w-4 h-4" />
-            </div>
+          </div>
           </div>
         </div>
 
