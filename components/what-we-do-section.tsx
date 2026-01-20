@@ -44,7 +44,7 @@ export function WhatWeDoSection() {
     <section
       id="what-we-do"
       ref={sectionRef}
-      className="relative py-24 md:py-32 -mt-24"
+      className="relative py-24 md:py-32"
       style={{ maxWidth: "100vw", overflowX: "hidden" }}
     >
       {/* Background */}
@@ -52,11 +52,11 @@ export function WhatWeDoSection() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16 md:mb-20">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-foreground mb-6 text-balance leading-tight">
+        <div className="text-center mb-16 md:mb-20 w-full">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-foreground mb-6 text-balance leading-tight w-full">
             Malaysia's Web3 builders community.
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-balance">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-balance w-full">
             Empowering founders and projects to launch and scale.
           </p>
         </div>
