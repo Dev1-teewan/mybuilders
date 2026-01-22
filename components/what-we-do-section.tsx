@@ -28,7 +28,7 @@ const features = [
   {
     icon: Wallet,
     number: "03",
-    title: "Fundraising",
+    title: "Fundraising & Capital",
     description:
       "MyBuilders helps Malaysian Web3 projects access global capital. We provide comprehensive fundraising support, from pitch deck refinement to investor introductions. As a trusted partner, we support projects beyond initial funding to help navigate Malaysia's unique regulatory landscape and connect with regional VCs.",
     gradient: "from-teal-400 to-cyan-400",

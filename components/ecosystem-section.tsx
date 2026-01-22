@@ -21,6 +21,7 @@ const partners = [
   { name: "Birdeye", logo: "/logo/Birdeye Logo_White logomark 600x600.png" },
   { name: "Hawksight", logo: "/logo/hawkfi.png" },
   { name: "Wormhole", logo: "/logo/wormhole.svg" },
+  { name: "Virtual Protocol", logo: "/logo/virtual-protocol.jpeg" },
 ]
 
 export function EcosystemSection() {
