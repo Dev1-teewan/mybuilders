@@ -88,7 +88,12 @@ export function EcosystemSection() {
         {/* Bottom CTA */}
         <div className="mt-20 text-center">
           <p className="text-muted-foreground mb-6 text-lg">Want to become a partner?</p>
-          <button className="group inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-secondary/50 hover:bg-secondary border border-border/50 hover:border-primary/50 text-foreground hover:text-primary transition-all duration-300">
+          <a 
+            href="https://forms.gle/ysEDQf5S7sBB6uAN6" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="group inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-secondary/50 hover:bg-secondary border border-border/50 hover:border-primary/50 text-foreground hover:text-primary transition-all duration-300"
+          >
             <span className="font-medium">Get in touch</span>
             <svg
               className="w-4 h-4 group-hover:translate-x-1 transition-transform"
@@ -98,7 +103,7 @@ export function EcosystemSection() {
             >
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
-          </button>
+          </a>
         </div>
       </div>
     </section>

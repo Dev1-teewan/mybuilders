@@ -71,8 +71,13 @@ export function Header() {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button className="bg-transparent border-2 border-border/60 text-foreground hover:bg-foreground hover:text-background hover:border-foreground transition-all duration-300 uppercase tracking-wider text-xs font-normal px-6 py-2 rounded-full hover:scale-105">
-              Apply Today
+            <Button 
+              asChild
+              className="bg-transparent border-2 border-border/60 text-foreground hover:bg-foreground hover:text-background hover:border-foreground transition-all duration-300 uppercase tracking-wider text-xs font-normal px-6 py-2 rounded-full hover:scale-105"
+            >
+              <a href="https://forms.gle/ysEDQf5S7sBB6uAN6" target="_blank" rel="noopener noreferrer">
+                Apply Today
+              </a>
             </Button>
           </div>
 
@@ -114,8 +119,13 @@ export function Header() {
               >
                 Partners
               </button>
-              <Button className="bg-transparent border-2 border-border/60 text-foreground hover:bg-foreground hover:text-background hover:border-foreground transition-all duration-300 w-full mt-2 rounded-full">
-                Apply Today
+              <Button 
+                asChild
+                className="bg-transparent border-2 border-border/60 text-foreground hover:bg-foreground hover:text-background hover:border-foreground transition-all duration-300 w-full mt-2 rounded-full"
+              >
+                <a href="https://forms.gle/ysEDQf5S7sBB6uAN6" target="_blank" rel="noopener noreferrer">
+                  Apply Today
+                </a>
               </Button>
             </nav>
           </div>

@@ -34,24 +34,39 @@ export function Footer() {
               </div>
             </Link>
 
-          {/* Line 2 Mobile: Social Links Center | Desktop: Social Links Right */}
+          {/* Line 2 Mobile: Social Links Center | Desktop: Social Links Right - Coming Soon */}
           <div className="flex items-center gap-3 justify-center md:justify-end">
-            <div className="w-10 h-10 rounded-xl bg-secondary/50 border border-border/40 flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-secondary hover:border-primary/50 transition-all duration-300 cursor-pointer">
-              <svg
-                className="w-4 h-4"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-                aria-label="X (Twitter)"
-              >
-                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-              </svg>
+            <div className="group relative">
+              <div className="w-10 h-10 rounded-xl bg-secondary/30 border border-border/30 flex items-center justify-center text-muted-foreground/50 cursor-not-allowed">
+                <svg
+                  className="w-4 h-4"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-label="X (Twitter) - Coming Soon"
+                >
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                </svg>
+              </div>
+              <span className="absolute -top-8 left-1/2 -translate-x-1/2 bg-secondary border border-border/50 text-muted-foreground text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+                Coming Soon
+              </span>
             </div>
-            <div className="w-10 h-10 rounded-xl bg-secondary/50 border border-border/40 flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-secondary hover:border-primary/50 transition-all duration-300 cursor-pointer">
-              <Send className="w-4 h-4" />
-          </div>
-            <div className="w-10 h-10 rounded-xl bg-secondary/50 border border-border/40 flex items-center justify-center text-muted-foreground hover:text-primary hover:bg-secondary hover:border-primary/50 transition-all duration-300 cursor-pointer">
-              <Linkedin className="w-4 h-4" />
-          </div>
+            <div className="group relative">
+              <div className="w-10 h-10 rounded-xl bg-secondary/30 border border-border/30 flex items-center justify-center text-muted-foreground/50 cursor-not-allowed">
+                <Send className="w-4 h-4" />
+              </div>
+              <span className="absolute -top-8 left-1/2 -translate-x-1/2 bg-secondary border border-border/50 text-muted-foreground text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+                Coming Soon
+              </span>
+            </div>
+            <div className="group relative">
+              <div className="w-10 h-10 rounded-xl bg-secondary/30 border border-border/30 flex items-center justify-center text-muted-foreground/50 cursor-not-allowed">
+                <Linkedin className="w-4 h-4" />
+              </div>
+              <span className="absolute -top-8 left-1/2 -translate-x-1/2 bg-secondary border border-border/50 text-muted-foreground text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+                Coming Soon
+              </span>
+            </div>
           </div>
         </div>
 

@@ -98,13 +98,16 @@ export function HeroSection() {
         {/* CTA Button */}
         <div className="flex items-center justify-center">
           <Button
+            asChild
             size="lg"
             className="bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105 hover:shadow-[0_0_30px_rgba(52,211,153,0.3)] transition-all duration-300 text-base px-12 py-6 rounded-lg font-medium group"
           >
-            Join now
-            <span className="inline-block ml-2 group-hover:translate-x-1 transition-transform">
-              →
-            </span>
+            <a href="https://forms.gle/ysEDQf5S7sBB6uAN6" target="_blank" rel="noopener noreferrer">
+              Join now
+              <span className="inline-block ml-2 group-hover:translate-x-1 transition-transform">
+                →
+              </span>
+            </a>
           </Button>
         </div>
       </div>
