@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Image from "next/image"
+import { useState } from "react";
+import Image from "next/image";
 
 const partners = [
   { name: "Jupiter", logo: "/logo/jupiter.svg" },
@@ -21,14 +21,18 @@ const partners = [
   { name: "Birdeye", logo: "/logo/Birdeye Logo_White logomark 600x600.png" },
   { name: "Hawksight", logo: "/logo/hawkfi.png" },
   { name: "Wormhole", logo: "/logo/wormhole.svg" },
-  { name: "Virtual Protocol", logo: "/logo/virtual-protocol.jpeg" },
-]
+  { name: "Virtual Protocol", logo: "/logo/virtual-protocol.png" },
+];
 
 export function EcosystemSection() {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
-    <section id="ecosystem" className="relative py-24 md:py-32" style={{ maxWidth: "100vw", overflowX: "hidden" }}>
+    <section
+      id="ecosystem"
+      className="relative py-24 md:py-32"
+      style={{ maxWidth: "100vw", overflowX: "hidden" }}
+    >
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary/5 to-background pointer-events-none" />
 
@@ -42,7 +46,8 @@ export function EcosystemSection() {
             Strategic Partners Across Web3
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-balance">
-            Collaborating with innovative projects across all blockchain ecosystems to drive the future of decentralized technology.
+            Collaborating with innovative projects across all blockchain
+            ecosystems to drive the future of decentralized technology.
           </p>
         </div>
 
@@ -58,7 +63,9 @@ export function EcosystemSection() {
               {/* Logo Container */}
               <div
                 className={`flex flex-col items-center justify-center gap-3 transition-all duration-300 px-4 py-4 ${
-                  hoveredIndex === index ? "opacity-100 scale-105" : "opacity-70 scale-100"
+                  hoveredIndex === index
+                    ? "opacity-100 scale-105"
+                    : "opacity-70 scale-100"
                 }`}
               >
                 {/* Partner Logo */}
@@ -72,7 +79,9 @@ export function EcosystemSection() {
                 </div>
                 <span
                   className={`font-medium text-xs text-center transition-colors duration-300 ${
-                    hoveredIndex === index ? "text-foreground" : "text-muted-foreground"
+                    hoveredIndex === index
+                      ? "text-foreground"
+                      : "text-muted-foreground"
                   }`}
                 >
                   {partner.name}
@@ -87,10 +96,12 @@ export function EcosystemSection() {
 
         {/* Bottom CTA */}
         <div className="mt-20 text-center">
-          <p className="text-muted-foreground mb-6 text-lg">Want to become a partner?</p>
-          <a 
-            href="https://forms.gle/ysEDQf5S7sBB6uAN6" 
-            target="_blank" 
+          <p className="text-muted-foreground mb-6 text-lg">
+            Want to become a partner?
+          </p>
+          <a
+            href="https://forms.gle/ysEDQf5S7sBB6uAN6"
+            target="_blank"
             rel="noopener noreferrer"
             className="group inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-secondary/50 hover:bg-secondary border border-border/50 hover:border-primary/50 text-foreground hover:text-primary transition-all duration-300"
           >
@@ -101,11 +112,16 @@ export function EcosystemSection() {
               stroke="currentColor"
               viewBox="0 0 24 24"
             >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M17 8l4 4m0 0l-4 4m4-4H3"
+              />
             </svg>
           </a>
         </div>
       </div>
     </section>
-  )
+  );
 }

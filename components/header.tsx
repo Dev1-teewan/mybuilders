@@ -1,27 +1,30 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Link from "next/link"
-import Image from "next/image"
-import { Menu, X } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { Menu, X } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId)
+    const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({
         behavior: "smooth",
         block: "start",
-      })
+      });
     }
-    setIsMenuOpen(false)
-  }
+    setIsMenuOpen(false);
+  };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-xl border-b border-border/50 shadow-lg" style={{ maxWidth: "100vw" }}>
+    <header
+      className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-xl border-b border-border/50 shadow-lg"
+      style={{ maxWidth: "100vw" }}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-18 md:h-20">
           {/* Logo */}
@@ -36,8 +39,12 @@ export function Header() {
               />
             </div>
             <div className="flex items-baseline gap-0">
-              <span className="text-foreground font-semibold text-lg md:text-xl tracking-tight">MY</span>
-              <span className="text-foreground font-normal text-lg md:text-xl tracking-tight">Builders</span>
+              <span className="text-foreground font-semibold text-lg md:text-xl tracking-tight">
+                MY
+              </span>
+              <span className="text-foreground font-normal text-lg md:text-xl tracking-tight">
+                Builders
+              </span>
             </div>
           </Link>
 
@@ -53,7 +60,7 @@ export function Header() {
               onClick={() => scrollToSection("what-we-do")}
               className="text-muted-foreground hover:text-foreground transition-colors text-sm font-normal uppercase tracking-wide cursor-pointer bg-transparent border-none"
             >
-              Services
+              Works
             </button>
             <button
               onClick={() => scrollToSection("events")}
@@ -71,11 +78,15 @@ export function Header() {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Button 
+            <Button
               asChild
               className="bg-transparent border-2 border-border/60 text-foreground hover:bg-foreground hover:text-background hover:border-foreground transition-all duration-300 uppercase tracking-wider text-xs font-normal px-6 py-2 rounded-full hover:scale-105"
             >
-              <a href="https://forms.gle/ysEDQf5S7sBB6uAN6" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://forms.gle/ysEDQf5S7sBB6uAN6"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Apply Today
               </a>
             </Button>
@@ -87,7 +98,11 @@ export function Header() {
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isMenuOpen ? (
+              <X className="w-6 h-6" />
+            ) : (
+              <Menu className="w-6 h-6" />
+            )}
           </button>
         </div>
 
@@ -105,7 +120,7 @@ export function Header() {
                 onClick={() => scrollToSection("what-we-do")}
                 className="text-muted-foreground hover:text-foreground transition-colors py-2 text-left bg-transparent border-none cursor-pointer"
               >
-                Services
+                Works
               </button>
               <button
                 onClick={() => scrollToSection("events")}
@@ -119,11 +134,15 @@ export function Header() {
               >
                 Partners
               </button>
-              <Button 
+              <Button
                 asChild
                 className="bg-transparent border-2 border-border/60 text-foreground hover:bg-foreground hover:text-background hover:border-foreground transition-all duration-300 w-full mt-2 rounded-full"
               >
-                <a href="https://forms.gle/ysEDQf5S7sBB6uAN6" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://forms.gle/ysEDQf5S7sBB6uAN6"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Apply Today
                 </a>
               </Button>
@@ -132,5 +151,5 @@ export function Header() {
         )}
       </div>
     </header>
-  )
+  );
 }
